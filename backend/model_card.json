@@ -1,0 +1,54 @@
+{
+  "model_version": "logistic_regression-2026-10-28",
+  "algorithm": "logistic_regression",
+  "features": [
+    "profile_picture",
+    "username_digit_ratio",
+    "name_word_count",
+    "name_digit_ratio",
+    "name_equals_username",
+    "bio_length",
+    "has_external_url",
+    "is_private",
+    "posts",
+    "followers",
+    "following"
+  ],
+  "seed": 42,
+  "thresholds": {
+    "review": 0.3,
+    "elevated": 0.7
+  },
+  "data": {
+    "train_rows": 576,
+    "test_rows": 120,
+    "train_class_balance": {
+      "0": 288,
+      "1": 288
+    },
+    "test_rows_overlapping_train_removed": 0,
+    "train_sha256": "54adc145282c4bbd",
+    "source": "Kaggle-style Instagram fake/genuine profile dataset (provenance/licence unverified)"
+  },
+  "cv_roc_auc": {
+    "logistic_regression": 0.962890625,
+    "gradient_boosting": 0.9749951774691359
+  },
+  "oof_roc_auc_selected": 0.962890625,
+  "test": {
+    "roc_auc": 0.936111111111111,
+    "pr_auc": 0.9399433186199048,
+    "f1_at_0.5": 0.8739495798319328,
+    "confusion_matrix[[tn,fp],[fn,tp]]": [
+      [
+        53,
+        7
+      ],
+      [
+        8,
+        52
+      ]
+    ]
+  },
+  "limitations": "Small, single-source dataset; labels may be noisy and platform/time dependent. Not evidence of identity or intent."
+}
